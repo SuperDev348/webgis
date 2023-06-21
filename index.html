@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Sketch update validation | Sample | ArcGIS Maps SDK for JavaScript 4.26</title>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css" />
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+    
+
+    <style>
+      html,
+      body,
+      .main {
+        display: flex;
+        width: 100%;
+      }
+      #search-panel {
+        width: 250px;
+        padding: 15px;
+      }
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: calc(100% - 250px);
+      }
+      .form-select {
+        width: 100%;
+      }
+      .form-input {
+        width: 100%;
+        outline: none;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+    <!-- load proj4js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.3/proj4.js"></script>
+    <script src="https://js.arcgis.com/4.26/"></script>
+  </head>
+
+  <body>
+    <div class="main">
+      <div id="search-panel">
+        <div class="form-group">
+          <label for="office">Regional cadastre office:</label>
+          <select id="office" class="form-select">
+            <option value="-1">--select--</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="department">Department/Brach:</label>
+          <select id="department" class="form-select">
+            <option value="-1">--select--</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="municipality">Cadastral municipality:</label>
+          <select id="municipality" class="form-select">
+            <option value="-1">--select--</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="parcel">Number of cat.particles:</label>
+          <input id="parcel-search" class="form-input" type="text" />
+          <select id="parcel" class="form-select">
+            <option value="-1">--select--</option>
+          </select>
+        </div>
+      </div>
+      <div id="viewDiv"></div>
+    </div>
+    <script src="map.js"></script>
+    <script src="search.js"></script>
+  </body>
+</html>

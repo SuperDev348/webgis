@@ -1,0 +1,76 @@
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="combobox.css" />
+  
+</head>
+<body>
+  <label for="combo1" class="combo-label">No filtering or autoselection</label>
+  <div class="combo js-nofilter">
+    <div role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-owns="listbox1" class="input-wrapper">
+      <input
+        aria-activedescendant=""
+        aria-autocomplete="none"
+        id="combo1"
+        class="combo-input"
+        type="text">
+    </div>
+    <div class="combo-menu" role="listbox" id="listbox1"></div>
+  </div>
+
+  <label for="combo2" class="combo-label">Filtering, no autoselection</label>
+  <div class="combo js-filter">
+    <div role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-owns="listbox2" class="input-wrapper">
+      <input
+        aria-activedescendant=""
+        aria-autocomplete="list"
+        id="combo2"
+        class="combo-input"
+        type="text">
+    </div>
+    <div class="combo-menu" role="listbox" id="listbox2"></div>
+  </div>
+
+  <label for="combo3" class="combo-label">ARIA 1.2 Combobox pattern (with filtering)</label>
+  <div class="combo js-aria12">
+    <input
+      aria-activedescendant=""
+      aria-autocomplete="list"
+      aria-haspopup="listbox"
+      aria-expanded="false"
+      aria-controls="listbox3"
+      role="combobox" 
+      id="combo3"
+      class="combo-input"
+      type="text">
+    <div class="combo-menu" role="listbox" id="listbox3"></div>
+  </div>
+
+  <label for="combo4" class="combo-label">Autoselect with filtering</label>
+  <div class="combo js-autoselect">
+    <div role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-owns="listbox4" class="input-wrapper">
+      <input
+        aria-activedescendant=""
+        aria-autocomplete="list"
+        id="combo4"
+        class="combo-input"
+        type="text">
+    </div>
+    <div class="combo-menu" role="listbox" id="listbox4"></div>
+  </div>
+
+  <label for="combo5" class="combo-label">Inline Autocomplete</label>
+  <div class="combo js-autocomplete">
+    <div role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-owns="listbox5" class="input-wrapper">
+      <input
+        aria-activedescendant=""
+        aria-autocomplete="both"
+        id="combo5"
+        class="combo-input"
+        type="text">
+    </div>
+    <div class="combo-menu" role="listbox" id="listbox5"></div>
+  </div>
+  <script src="combobox.js"></script>
+</body>
+</html>
